@@ -1,4 +1,3 @@
-
 local dateTimeNow = DateTime.now
 local tableFind = table.find
 local taskSpawn = task.spawn
@@ -188,4 +187,8 @@ local function Main()
 	if not attached(3.5) then
 		notify("Unable to find backdoor.\nGame not backdoored?")
 	end
+end
+
+if game:IsLoaded() then
+	pcall(Main)
 end
